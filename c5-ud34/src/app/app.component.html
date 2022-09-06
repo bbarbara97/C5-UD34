@@ -1,0 +1,128 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-2 col-md-4"> </div>
+        <div class="col-sm-8 col-md-4">
+            <!-- Calculator UI -->
+
+            <div class="container p-0 shadow border border-dark bg-info">
+                <div class="form-input">
+                    <input type="text" class="form-control border-0 rounded-0 input-lg text-muted bg-light text-end p-2" [(ngModel)]="expression" id="expression" value="0" disabled="">
+                    <input type="text" class="form-control border-0 rounded-0 input-xs text-muted bg-light text-end p-2" [(ngModel)]="result" id="result" value="0" disabled="">
+                </div>
+
+                <div class="container text-center px-0">
+                    <div class="row">
+                        <div class="col-3 ">
+                            <div class="num p-1 text-light bg-info" (click)="darNum('9')">9</div>
+                        </div>
+                        <div class="col-3 ">
+                            <div class="num p-1 text-light bg-info" (click)="darNum('8')">8</div>
+                        </div>
+                        <div class="col-3 ">
+                            <div class="num p-1 text-light bg-info" (click)="darNum('7')">7</div>
+                        </div>
+                        <div class="col-3 my-0 ">
+                            <div class="num p-1 text-dark bg-warning my-0 not" (click)="darC()" id="allClear">
+                                DEL</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-9"></div>
+                        <div class="col-3 my-0">
+                            <div class="num text-dark bg-warning my-0" (click)="darOperador(4)">
+                                /</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="num p-1 text-light bg-info" (click)="darNum('6')">6</div>
+                        </div>
+                        <div class="col-3">
+                            <div class="num p-1 text-light bg-info" (click)="darNum('5')">5</div>
+                        </div>
+                        <div class="col-3">
+                            <div class="num p-1 text-light bg-info" (click)="darNum('4')">4</div>
+                        </div>
+                        <div class="col-3">
+                            <div class="num p-1 text-dark bg-warning my-0" (click)="darOperador(3)">
+                                X</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-9"></div>
+                        <div class="col-3">
+                            <div class="num text-dark bg-warning my-0" (click)="darOperador(2)">
+                                -</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="num p-1 text-light bg-info" (click)="darNum('3')">3</div>
+                        </div>
+                        <div class="col-3">
+                            <div class="num p-1 text-light bg-info" (click)="darNum('2')">2</div>
+                        </div>
+                        <div class="col-3">
+                            <div class="num p-1 text-light bg-info" (click)="darNum('1')">1</div>
+                        </div>
+                        <div class="col-3">
+                            <div class="num p-1 text-dark bg-warning my-0 num" (click)="darOperador(1)">
+                                +</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-9"></div>
+                        <div class="col-3 ">
+                            <div class="text-warning bg-warning my-0 p-0">
+                                .</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3 ">
+                            <div class="num p-1 text-light bg-info" (click)="darComa()">.</div>
+                        </div>
+                        <div class="col-3 ">
+                            <div class="num p-1 text-light bg-info" (click)="darNum('0')">0</div>
+                        </div>
+                        <div class="col-3 ">
+                            <div class="num p-1 text-light bg-info" (click)="darNum('00')"> 00 </div>
+                        </div>
+                        <div class="col-3 ">
+                            <div class="num p-1 text-dark bg-warning my-0 num not" (click)="darIgual()" id="equals">
+                                =</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 col-4"> </div>
+    </div>
+</div>
+
+<script>
+    refresh()
+</script>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
